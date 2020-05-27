@@ -33,6 +33,16 @@ get(key){
     }
     return undefined
 }
+
+keys(){
+	let keysArray = [];
+	for (var i = 0; i < data.length; i++) {
+		if(this.data[i]){
+			keysArray.push(data[i][0][0])
+		}
+	}
+	return keysArray
+}
    
 }
 const myHashTable = new HashTable(50);

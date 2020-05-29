@@ -60,6 +60,23 @@ class LinkedList {
 
   }
 
+  reverse(){
+      if(!this.head.next){
+          return head
+      }
+      const first = this.head
+      this.tail = this.head
+      const second = this.head.next
+      while(second.next){
+          const temp = second.next
+           second.next = first
+           first = second
+           second = temp
+      }
+      this.head.next = null
+      this.head = first
+  }
+
   traverseToIndex(index) {
     //Check parameters
     let counter = 0;

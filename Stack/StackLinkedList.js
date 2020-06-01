@@ -31,6 +31,21 @@ class Stack{
         this.length++
         return this
     }
+
+    pup(){
+
+        if(!this.top){
+            return null 
+        }
+        // if(this.length == 0) or
+        if(this.top === this.bottom){
+            this.bottom = null
+        }
+        const holdingPoint = this.top
+        this.top = this.top.next 
+        this.length --
+        return this
+    }
 }
 
 

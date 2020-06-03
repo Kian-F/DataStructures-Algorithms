@@ -37,6 +37,25 @@ class BinarySearchTree{
 
         }
       }
+
+      lookup(value){
+          let currentNode = this.root
+          if(!currentNode){
+              return false
+          }
+             while(currentNode){
+                if(value < currentNode.value){
+                   currentNode = currentNode.left;
+                   } else if(value > currentNode.value){
+                       currentNode = currentNode.right;
+                   }else if(currentNode.vale === value){
+                       return currentNode
+                   }
+                }
+                return false
+             }
+           
+      
 }
 
 

@@ -14,5 +14,12 @@
 // // logs [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15, 19]
 
 function mergeArrays(myArray, alicesArray){
+    // const mergedArray = myArray.concat(alicesArray);
+    // mergedArray.sort((a, b) => a-b)
+    let mergedArray = [];
     
+    const headOfMyArray = myArray[0];
+    const headOfAliceArray = alicesArray[0]
+    if()
+
 }

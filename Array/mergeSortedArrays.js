@@ -13,13 +13,22 @@
 // console.log(mergeArrays(myArray, alicesArray));
 // // logs [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15, 19]
 
-function mergeArrays(myArray, alicesArray){
-    // const mergedArray = myArray.concat(alicesArray);
-    // mergedArray.sort((a, b) => a-b)
-    let mergedArray = [];
-    
-    const headOfMyArray = myArray[0];
-    const headOfAliceArray = alicesArray[0]
-    if()
+function mergeArrays(myArray, alicesArray) {
 
-}
+    const mergedArray = [];
+  
+    const headOfMyArray = myArray[0];
+    const headOfAlicesArray = alicesArray[0];
+  
+    // Case: 0th comes from my array
+    if (headOfMyArray < headOfAlicesArray) {
+      mergedArray[0] = headOfMyArray;
+  
+      // Case: 0th comes from Alice's array
+    } else {
+      mergedArray[0] = headOfAlicesArray;
+    }
+  
+    // Eventually we'll want to return the merged array
+    return mergedArray;
+  }

@@ -17,18 +17,27 @@ function mergeArrays(myArray, alicesArray) {
 
     const mergedArray = [];
   
-    const headOfMyArray = myArray[0];
-    const headOfAlicesArray = alicesArray[0];
+    let currentIndexAlices = 0;
+    let currentIndexMine = 0;
+    let currentIndexMerged = 0;
   
-    // Case: 0th comes from my array
-    if (headOfMyArray < headOfAlicesArray) {
-      mergedArray[0] = headOfMyArray;
+    while (currentIndexMerged < (myArray.length + alicesArray.length)) {
+      const firstUnmergedAlices = alicesArray[currentIndexAlices];
+      const firstUnmergedMine = myArray[currentIndexMine];
   
-      // Case: 0th comes from Alice's array
-    } else {
-      mergedArray[0] = headOfAlicesArray;
+      // Case: next comes from my array
+      if (firstUnmergedMine < firstUnmergedAlices) {
+        mergedArray[currentIndexMerged] = firstUnmergedMine;
+        currentIndexMine++;
+  
+        // Case: next comes from Alice's array
+      } else {
+        mergedArray[currentIndexMerged] = firstUnmergedAlices;
+        currentIndexAlices++;
+      }
+  
+      currentIndexMerged++;
     }
   
-    // Eventually we'll want to return the merged array
     return mergedArray;
   }
